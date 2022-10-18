@@ -21,7 +21,7 @@ body {
     font-weight: 500;
   }
 
-  nav .show {
+  nav a:nth-child(2) {
     font-weight: 700;
     text-decoration: underline;
     font-size: large;
