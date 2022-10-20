@@ -7,6 +7,8 @@ const addShowToDom = (show) => {
   const image = document.createElement('img');
   image.src = `${show.image}`;
   image.alt = 'film poster';
+  const titleContainer = document.createElement('div');
+  titleContainer.classList = 'title__container';
   const movieTitle = document.createElement('div');
   movieTitle.classList = 'movie__title';
   const movieName = document.createElement('p');
@@ -27,11 +29,12 @@ const addShowToDom = (show) => {
 
   movieItem.appendChild(image);
   movieTitle.appendChild(movieName);
+  titleContainer.appendChild(movieTitle);
   likesContainer.appendChild(like);
   likesContainer.appendChild(likesNum);
   movieTitle.appendChild(likesContainer);
-  movieItem.appendChild(movieTitle);
-  movieItem.appendChild(commentBtn);
+  titleContainer.appendChild(commentBtn);
+  movieItem.appendChild(titleContainer);
   showsContainer.appendChild(movieItem);
 };
 
