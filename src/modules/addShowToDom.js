@@ -24,10 +24,6 @@ const addShowToDom = (show) => {
   commentBtn.type = 'button';
   commentBtn.id = `comment-btn-${show.id}`;
   commentBtn.innerText = 'Comments';
-  const reservationBtn = document.createElement('button');
-  reservationBtn.type = 'button';
-  reservationBtn.id = `reservation-btn-${show.id}`;
-  reservationBtn.innerText = 'Reservations';
 
   movieItem.appendChild(image);
   movieTitle.appendChild(movieName);
@@ -36,7 +32,6 @@ const addShowToDom = (show) => {
   movieTitle.appendChild(likesContainer);
   movieItem.appendChild(movieTitle);
   movieItem.appendChild(commentBtn);
-  movieItem.appendChild(reservationBtn);
   showsContainer.appendChild(movieItem);
 };
 
