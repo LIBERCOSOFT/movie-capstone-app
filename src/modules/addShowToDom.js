@@ -5,7 +5,7 @@ const addShowToDom = (show) => {
   const movieItem = document.createElement('div');
   movieItem.className = 'movie__item';
   const image = document.createElement('img');
-  image.src = `${show.image.medium}`;
+  image.src = `${show.image}`;
   image.alt = 'film poster';
   const movieTitle = document.createElement('div');
   movieTitle.classList = 'movie__title';
@@ -18,7 +18,8 @@ const addShowToDom = (show) => {
   like.classList = 'fa-regular fa-heart';
   like.addEventListener('click', EventListeners.likeClick);
   const likesNum = document.createElement('p');
-  likesNum.innerText = '5 likes';
+  likesNum.id = `like-num-${show.id}`;
+  likesNum.innerText = `${show.likes} Likes`;
   const commentBtn = document.createElement('button');
   commentBtn.type = 'button';
   commentBtn.id = `comment-btn-${show.id}`;
