@@ -42,7 +42,7 @@ const displaySelectedShow = (movies) => {
               </div>
           </div>
          `;
-  commentsDetail.innerHTML += htmlComments;
+  commentsDetail.innerHTML = htmlComments;
 };
 
 export default displaySelectedShow;
