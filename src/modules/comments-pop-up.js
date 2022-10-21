@@ -7,7 +7,6 @@ const involvmentApi = 'https://us-central1-involvement-api.cloudfunctions.net/ca
 const commentsUser = document.querySelector('.comment-user-name');
 const commentsContainer = document.querySelector('.comments-list');
 const commentContent = document.querySelector('.comments-content');
-const commentsCount = document.querySelector('.comments-counter');
 const moviesApi = 'https://api.tvmaze.com/shows';
 
 export default class PopUpComment {
@@ -52,18 +51,5 @@ export default class PopUpComment {
          commentsContainer.appendChild(allComments);
        });
      }
-   }
-
-   static commentsCounter = async (id) => {
-     const response = await fetch(`${involvmentApi}/comments?item_id=${id}`);
-     const numberOfComments = await response.json();
-     const count = numberOfComments.length;
-
-     if (count === undefined) {
-       commentsCount.innerHTML = '(0)';
-     } else {
-       commentsCount.innerHTML = `(${count})`;
-     }
-     return count;
    }
 }

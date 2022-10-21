@@ -5,6 +5,7 @@ import getAllShows from './modules/getAllShows.js';
 import addShowToDom from './modules/addShowToDom.js';
 import getLikes from './modules/getLikes.js';
 import displaySelectedShow from './modules/displaySelectedShow.js';
+import commentsCounter from './modules/commentCounter.js';
 
 const homepage = document.querySelector('.movies__container');
 const commentBtn = document.querySelector('.comment-submit-btn');
@@ -45,7 +46,7 @@ homepage.addEventListener('click', async (event) => {
     PopUpComment.commentPopUp(popUpId).then(async (movies) => {
       displaySelectedShow(movies);
       await PopUpComment.getComments(commentId);
-      await PopUpComment.commentsCounter(commentId);
+      await commentsCounter(commentId);
     });
   }
 });
@@ -68,7 +69,7 @@ commentBtn.addEventListener('click', async (event) => {
     }
     await PopUpComment.addComments(idMovie);
     await PopUpComment.getComments(idMovie);
-    await PopUpComment.commentsCounter(idMovie);
+    await commentsCounter(idMovie);
     commentsUser.value = '';
     commentContent.value = '';
   } else {
