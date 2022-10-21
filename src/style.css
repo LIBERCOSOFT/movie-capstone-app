@@ -9,6 +9,17 @@ body {
   margin: 2em;
 }
 
+footer {
+  margin-top: 30px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+footer a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   nav {
     display: flex;
