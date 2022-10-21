@@ -1,6 +1,5 @@
 import './style.css';
 import PopUpComment from './modules/comments-pop-up.js';
-
 import allShowsLen from './modules/allShowsLen.js';
 import getAllShows from './modules/getAllShows.js';
 import addShowToDom from './modules/addShowToDom.js';
