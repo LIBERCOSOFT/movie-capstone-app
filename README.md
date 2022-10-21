@@ -20,17 +20,20 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link]( https://libercosoft.github.io/movie-capstone-app/dist/)
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
+
 ```
 git clone  https://github.com/LIBERCOSOFT/movie-capstone-app/
 ```
+
 ```
 git checkout -b Development
 ```
+
 ```
 git pull origin development
 ```
@@ -40,21 +43,26 @@ npm run start
 ```
 
 ### Prerequisites
+
 - [Movie API](https://api.tvmaze.com/shows)
 - `Webpack installation`
 - `SSH key for github linked to git on local environment`
 - `Html & CSS basics`
 
 ### Setup
+
 - If it suits you, on your local computer, create a directory in your preferred location (e.g in the Desktop or Document directory)
+
 ### Install
 
 ### Usage
 
 ### Run tests
+
 - Install project dependencies (libraries) using `npm install` command
 - Run webpack build using npm run build command
 - Run webpack dev server using npm run start command
+
 ### Deployment
 
 ## Authors
