@@ -21,6 +21,7 @@ const addShowToDom = (show) => {
   likesNum.id = `like-num-${show.id}`;
   likesNum.innerText = `${show.likes} Likes`;
   const commentBtn = document.createElement('button');
+  commentBtn.className = 'comment-btn';
   commentBtn.type = 'button';
   commentBtn.id = `comment-btn-${show.id}`;
   commentBtn.innerText = 'Comments';
