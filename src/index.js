@@ -72,6 +72,6 @@ commentBtn.addEventListener('click', async (event) => {
     commentsUser.value = '';
     commentContent.value = '';
   } else {
-    commentFail.innerHTML = 'Failed,Please try again';
+    commentFail.innerHTML = 'Invalid user input';
   }
 });

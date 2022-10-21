@@ -10,9 +10,9 @@ global.fetch = jest.fn(() => Promise.resolve({
       username: 'Tonny',
     },
     {
-      comment: 'Absoulutley a banger!',
+      comment: 'Movie!',
       creation_date: '2022-10-12',
-      username: 'Natanim',
+      username: 'Muchui',
     },
   ]),
 }));
