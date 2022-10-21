@@ -5,6 +5,7 @@ import allShowsLen from './modules/allShowsLen.js';
 import getAllShows from './modules/getAllShows.js';
 import addShowToDom from './modules/addShowToDom.js';
 import getLikes from './modules/getLikes.js';
+import displaySelectedShow from './modules/displaySelectedShow.js';
 
 const homepage = document.querySelector('.movies__container');
 const commentBtn = document.querySelector('.comment-submit-btn');
@@ -38,12 +39,15 @@ getAllShows().then(async (res) => {
 homepage.addEventListener('click', async (event) => {
   if (event.target.className === 'comment-btn') {
     const commentId = event.target.id;
+    const popUpId = event.target.id.split('-')[2];
     selectedComment = commentId;
     commentSection.style.display = 'block';
     homepage.classList.add('active');
-    await PopUpComment.commentPopUp(commentId);
-    await PopUpComment.getComments(commentId);
-    await PopUpComment.commentsCounter(commentId);
+    PopUpComment.commentPopUp(popUpId).then(async (movies) => {
+      displaySelectedShow(movies);
+      await PopUpComment.getComments(commentId);
+      await PopUpComment.commentsCounter(commentId);
+    });
   }
 });
 
